@@ -10,9 +10,9 @@ DinheiroJogadores = ""  # Variavel com cada dinheiro de jogador formatada em 5 e
 NomeCasas = ""  # Variavel com cada nome de casa formatada em 30 espaços.
 Terrenos = ""  # Variavel com todos os terrenos, respectivos ids, preços e aluguel formatados em '00(ID)000(Preço)0000(Aluguel)'.
 # IDs =  00 = Sem proprietario, 01 ~ 06 reservado a Jogadores, 07 = Ponto Partida, 08 = Imposto , 09 = Sorte Revés, 10 = Vá para prisão, 11 = Prisão, 12 = Lucros ou Dividendos, 13 = Parada Livre
-# Devido à companhias qem o dado * x, se o aluguel for maior que 999, multiplica-se o dado pelos dois números mais significativos. Ex : 4000 = (2 * d6) * 40.
-Sorte = ""  # Variavel com todas as frases de sorte formatadas em 100 espaços.
-Reves = ""  # Variavel com todas as frases de revés formatadas em 100 espaços.
+# Devido à companhias em que paga-se o dado * x, se o aluguel for maior que 999, multiplica-se o dado pelos dois números mais significativos. Ex : 4000 = (2 * d6) * 40.
+Sorte = ""  # Variavel com todas as frases de sorte formatadas em 82 espaços.
+Reves = ""  # Variavel com todas as frases de revés formatadas em 82 espaços.
 # Atribuição dos nomes de casa, terrenos, sorte e revés
 NomeCasas = ("Ponto de Partida.             Leblon.                       Sorte Revés.                  " +
              "Av. Presidente Vargas.        Av. Nossa S. De Copabacana.   Companhia Ferroviária.        " +
