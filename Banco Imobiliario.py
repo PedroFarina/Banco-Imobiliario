@@ -100,7 +100,7 @@ while not FimDeJogo:
                         Concatena = ""
                         for i2 in range(0, 360, 9):
                             if Terrenos[i2: i2 + 2] == "0" + str(
-                                            0 + 1):  # ID Correspondente ao dono do terreno = jogador atual
+                                            i + 1):  # ID Correspondente ao dono do terreno = jogador atual
                                 Concatena += NomeCasas[((i2 // 9) * 30): (((i2 // 9) + 1) * 30)] + "\r\n"
                         if Concatena != "":
                             print(Nome + ", você tem estes terrenos:")
