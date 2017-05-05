@@ -75,7 +75,6 @@ for i in range(0, NumJogadores):
     NomeCorreto = None
 FimDeJogo = False
 while not FimDeJogo:
-    Falidos = 0
     for i in range(0, NumJogadores):
         if StatusJogadores[i] != "4":  # Verificando se o jogador não faliu.
             Nome = NomeJogadores[(i * 50):((i + 1) * 50)].strip()
@@ -136,18 +135,19 @@ while not FimDeJogo:
                 elif 0 < int(IDTerrenoAtual) < 7:  # Pertence a alguém.
                     Aluguel = int(TerrenoAtual[5:9])
                     IDTerrenoAtual = int(IDTerrenoAtual) - 1
-                    DinDono = int(DinheiroJogadores[(IDTerrenoAtual * 5):((IDTerrenoAtual + 1) * 5)])
-                    if Aluguel > 999:
-                        Aluguel = (d6 + d62) * Aluguel // 100
-                    print("Este terreno já tem dono, e você deve pagar R$" + str(
-                        Aluguel) + " de aluguel a(o) " + NomeJogadores[
+                    if IDTerrenoAtual != i:
+                        DinDono = int(DinheiroJogadores[(IDTerrenoAtual * 5):((IDTerrenoAtual + 1) * 5)])
+                        if Aluguel > 999:
+                            Aluguel = (d6 + d62) * Aluguel // 100
+                        print("Este terreno já tem dono, e você deve pagar R$" + str(
+                            Aluguel) + " de aluguel a(o) " + NomeJogadores[
                                                          (IDTerrenoAtual * 50):((IDTerrenoAtual + 1) * 50)])
-                    Din -= Aluguel
-                    DinDono += Aluguel
-                    DinDono = str(DinDono)
-                    while len(DinDono) < 5:
-                        DinDono = "0" + DinDono
-                    DinheiroJogadores = DinheiroJogadores[0: IDTerrenoAtual * 5] + DinDono + DinheiroJogadores[
+                        Din -= Aluguel
+                        DinDono += Aluguel
+                        DinDono = str(DinDono)
+                        while len(DinDono) < 5:
+                            DinDono = "0" + DinDono
+                        DinheiroJogadores = DinheiroJogadores[0: IDTerrenoAtual * 5] + DinDono + DinheiroJogadores[
                                                                                              (IDTerrenoAtual * 5) + 5:]
                 elif IDTerrenoAtual == "08":  # Imposto de renda
                     Din = Din * 0.9
